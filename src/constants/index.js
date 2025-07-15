@@ -58,8 +58,8 @@ export const projects = [
     title: 'This Portfolio',
     desc: 'My personal portfolio',
     techs: ['React', 'TailwindCSS', 'React-Router'],
-    githubLink: '',
-    liveLink: '',
+    githubLink: 'https://github.com/AZZAM-K/Portfolio.git',
+    liveLink: 'https://azzam-k-portfolio.vercel.app',
   },
   {
     img: calculator,
