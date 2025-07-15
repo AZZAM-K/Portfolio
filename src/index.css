@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  overflow-x: hidden;
+  background-color: hsl(218, 12%, 18%);
+}
+
+.nav {
+  background-color: hsl(218, 12%, 18%);
+}
