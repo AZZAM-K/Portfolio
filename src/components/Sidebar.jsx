@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen }) => {
     <div
       className={`lg:hidden ${
         !isOpen && 'right-[-100%]'
-      } flex flex-col px-10 transition-all ease-out duration-300 py-5 justify-between fixed top-25 right-0 bg-[#242833]`}
+      } flex flex-col px-10 transition-all ease-out duration-300 py-5 justify-between fixed top-25 right-0 bg-[#242833] z-200`}
     >
       <ul className='flex flex-col gap-10 text-2xl'>
         <li>
