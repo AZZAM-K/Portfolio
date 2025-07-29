@@ -7,7 +7,7 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <div className='flex justify-between'>
+      <div className='flex justify-between flex-col sm:flex-row gap-3'>
         <h2
           className='font-bold text-white text-3xl relative inline-block before:content-["#"] before:text-red-400 
         after:content-[""] after:block after:w-[10vw] after:h-px after:bg-red-400 after:absolute after:transform 

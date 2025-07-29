@@ -28,13 +28,6 @@ const ContactSection = () => {
             </a>
             <a
               className='flex items-center gap-2 text-lg text-gray-400 mt-2 hover:text-red-400'
-              href='mailto:tsm.azzamkahil@gmail.com'
-            >
-              <MdEmail size={25} />
-              <span>tsm.azzamkahil@gmail.com</span>
-            </a>
-            <a
-              className='flex items-center gap-2 text-lg text-gray-400 mt-2 hover:text-red-400'
               href='https://wa.me/96176338952'
             >
               <MdWhatsapp size={30} />
