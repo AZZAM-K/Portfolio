@@ -7,6 +7,7 @@ import tipCalculator from './tip-calculator.png'
 import ticTacToe from './tic-tac-toe.png'
 import eCommerce from './E-Commerce.png'
 import portfolio from './Portfolio.png'
+import myImage from './me.jpg'
 
 export {
   appleStore,
@@ -18,4 +19,5 @@ export {
   tipCalculator,
   eCommerce,
   portfolio,
+  myImage,
 }

@@ -1,8 +1,8 @@
-import myImage from '../assets/myImage.jpg'
+import { myImage } from '../assets'
 
 const HeroSection = () => {
   return (
-    <div className='flex flex-col md:flex-row gap-10'>
+    <div className='flex flex-col md:flex-row gap-20'>
       <div className='flex flex-col gap-10 mt-5' data-aos='fade-right'>
         <h1 className='font-bold text-white text-4xl'>
           I am a <span className='text-red-400'>full-stack</span> developer
@@ -18,8 +18,8 @@ const HeroSection = () => {
           Contact ME =&gt;
         </a>
       </div>
-      <div className='w-full h-fit' data-aos='zoom-in'>
-        <img src={myImage} className='object-cover aspect-square h-100' />
+      <div className='w-full h-fit flex items-center' data-aos='zoom-in'>
+        <img src={myImage} className='object-fit h-100 aspect-square' />
       </div>
     </div>
   )
