@@ -8,9 +8,18 @@ import {
   tipCalculator,
   eCommerce,
   portfolio,
+  teamsDev,
 } from '../assets'
 
 export const projects = [
+  {
+    img: teamsDev,
+    title: 'teams-dev',
+    desc: 'Project Management app',
+    techs: ['Next.js', 'TailwindCSS', 'PostgreSQL', 'Prisma', 'Auth.js'],
+    githubLink: 'https://github.com/AZZAM-K/teams-dev.git',
+    liveLink: 'https://teams-dev-lb.vercel.app',
+  },
   {
     img: appleStore,
     title: 'Apple Store',

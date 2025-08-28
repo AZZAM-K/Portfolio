@@ -8,6 +8,7 @@ import ticTacToe from './tic-tac-toe.png'
 import eCommerce from './E-Commerce.png'
 import portfolio from './Portfolio.png'
 import myImage from './me.jpg'
+import teamsDev from './teams-dev.png'
 
 export {
   appleStore,
@@ -20,4 +21,5 @@ export {
   eCommerce,
   portfolio,
   myImage,
+  teamsDev,
 }
