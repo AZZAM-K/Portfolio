@@ -21,10 +21,10 @@ const ContactSection = () => {
           <div className='mt-4'>
             <a
               className='flex items-center gap-2 text-lg text-gray-400 mt-2 hover:text-red-400'
-              href='mailto:azzam.alkahil@icloud.com'
+              href='mailto:azzam.kahil.dev@gmail.com'
             >
               <MdEmail size={25} />
-              <span>azzam.alkahil@icloud.com</span>
+              <span>azzam.kahil.dev@gmail.com</span>
             </a>
             <a
               className='flex items-center gap-2 text-lg text-gray-400 mt-2 hover:text-red-400'
