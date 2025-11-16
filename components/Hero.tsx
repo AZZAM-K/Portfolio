@@ -1,5 +1,5 @@
 import TypingAnimation from '@/components/TypingAnimation'
-import { MapPin, FileDown } from 'lucide-react'
+import { MapPin, File } from 'lucide-react'
 import { LinkedinIcon, GithubIcon } from '@/components/Icons'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,11 +26,12 @@ const Hero = () => {
             <div className='mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
               <Link
                 href='/CV.pdf'
-                download
+                target='_blank'
+                rel='noopener noreferrer'
                 className='inline-flex items-center justify-center gap-4 px-8 py-3 bg-gray-800 text-white font-medium rounded-lg shadow-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105'
               >
-                Download CV
-                <FileDown className='w-7 h-7' />
+                View my CV
+                <File className='w-7 h-7' />
               </Link>
               <ContactButton />
             </div>
