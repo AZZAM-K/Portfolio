@@ -25,7 +25,8 @@ const Hero = () => {
             </p>
             <div className='mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
               <Link
-                href='#'
+                href='/CV.pdf'
+                download
                 className='inline-flex items-center justify-center gap-4 px-8 py-3 bg-gray-800 text-white font-medium rounded-lg shadow-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105'
               >
                 Download CV
