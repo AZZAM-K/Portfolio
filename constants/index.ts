@@ -1,10 +1,7 @@
 import techTalks from '@/public/techtalks.webp'
 import teamsDev from '@/public/teams-dev.png'
 import appleStore from '@/public/apple-store.png'
-import calculator from '@/public/calculator.png'
 import worldExplorer from '@/public/world-explorer.png'
-import restaurant from '@/public/restaurant.png'
-import todoList from '@/public/todo-list.png'
 import CodeLeb from '@/public/codeLeb.png'
 
 export const navItems = [
@@ -92,7 +89,7 @@ export const experienceData = [
 export const projects = [
   {
     img: CodeLeb,
-    title: 'codeLeb',
+    title: 'CodeLeb',
     description:
       'A gamified learning platform designed to make programming fun, structured, and motivating. It combines interactive lessons, coding challenges, and an XP-based progression system to help learners grow from beginner to advanced levels.',
     techs: ['Next.js', 'TailwindCSS', 'PostgreSQL', 'Prisma', 'Clerk'],
