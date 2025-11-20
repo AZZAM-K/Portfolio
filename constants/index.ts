@@ -136,31 +136,4 @@ export const projects = [
     githubLink: 'https://github.com/AZZAM-K/World-Explorer.git',
     liveLink: 'https://azzam-k-world-explorer.vercel.app',
   },
-  {
-    img: todoList,
-    title: 'Todo List',
-    description:
-      'A simple and intuitive task-management app that allows users to add tasks, delete them, and mark them as completed. Built for clarity, simplicity, and a clean user experience.',
-    techs: ['React', 'CSS'],
-    githubLink: 'https://github.com/AZZAM-K/Todo-list.git',
-    liveLink: 'https://azzam-k-todo-list.vercel.app',
-  },
-  {
-    img: restaurant,
-    title: 'Restaurant',
-    description:
-      'A responsive dessert-ordering application where users can browse items, add them to a cart, adjust quantities, view their total, and confirm their order—all through a clean and user-friendly interface.',
-    techs: ['React', 'CSS'],
-    githubLink: 'https://github.com/AZZAM-K/Restaurant.git',
-    liveLink: 'https://azzam-k-restaurant.vercel.app',
-  },
-  {
-    img: calculator,
-    title: 'Calculator',
-    description:
-      'A modern calculator application offering basic arithmetic functionality and multiple switchable UI themes for a customizable user experience.',
-    techs: ['React', 'CSS'],
-    githubLink: 'https://github.com/AZZAM-K/Calculator.git',
-    liveLink: 'https://azzam-k-calculator.vercel.app',
-  },
 ]
