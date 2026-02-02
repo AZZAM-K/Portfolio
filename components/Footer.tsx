@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <div className='border-t border-gray-700 pt-8 mt-8'>
           <p className='text-center text-sm text-gray-500'>
-            © 2025 Azzam Al Kahil. All rights reserved.
+            © 2026 Azzam Al Kahil. All rights reserved.
           </p>
         </div>
       </div>

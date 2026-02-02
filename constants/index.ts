@@ -1,8 +1,8 @@
 import techTalks from '@/public/techtalks.webp'
 import teamsDev from '@/public/teams-dev.png'
 import appleStore from '@/public/apple-store.png'
-import worldExplorer from '@/public/world-explorer.png'
 import CodeLeb from '@/public/codeLeb.png'
+import LebSpace from '@/public/LebSpace.png'
 
 export const navItems = [
   { name: 'Home', to: 'home', offset: 0 },
@@ -97,6 +97,24 @@ export const projects = [
     liveLink: 'https://codeleb.vercel.app',
   },
   {
+    img: LebSpace,
+    title: 'LebSpace',
+    description:
+      'A full-featured social media platform built specifically for Lebanese users. LebSpace offers real-time messaging, stories, posts, notifications, and strong privacy controls, all wrapped in a modern, responsive UI for a smooth and secure social experience.',
+    techs: [
+      'React',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'React-Router',
+      'Socket.io',
+      'TailwindCSS',
+      'Cloudinary',
+    ],
+    githubLink: 'https://github.com/AZZAM-K/LebSpace.git',
+    liveLink: 'https://lebspace.vercel.app',
+  },
+  {
     img: teamsDev,
     title: 'teams-dev',
     description:
@@ -123,14 +141,5 @@ export const projects = [
     ],
     githubLink: 'https://github.com/AZZAM-K/Apple-Store-Frontend.git',
     liveLink: 'https://apple-store-azzam-k.vercel.app',
-  },
-  {
-    img: worldExplorer,
-    title: 'World Explorer',
-    description:
-      'An interactive application that lets users explore detailed information about countries around the world. Includes advanced search, filtering, and sorting options, along with dedicated pages for each country.',
-    techs: ['React', 'React-Router', 'TypeScript', 'CSS'],
-    githubLink: 'https://github.com/AZZAM-K/World-Explorer.git',
-    liveLink: 'https://azzam-k-world-explorer.vercel.app',
   },
 ]
