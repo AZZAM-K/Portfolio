@@ -73,6 +73,11 @@ export const skills = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
     color: '#336791',
   },
+  {
+    name: 'AWS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+    color: '#FF9900',
+  },
 ]
 
 export const experienceData = [
