@@ -1,82 +1,137 @@
-import techTalks from '@/public/techtalks.webp'
 import teamsDev from '@/public/teams-dev.png'
 import appleStore from '@/public/apple-store.png'
 import CodeLeb from '@/public/codeLeb.png'
 import LebSpace from '@/public/LebSpace.png'
 
 export const navItems = [
-  { name: 'Home', to: 'home', offset: 0 },
-  { name: 'About', to: 'about', offset: -80 },
-  { name: 'Skills', to: 'skills', offset: -80 },
-  { name: 'Experience', to: 'experience', offset: -50 },
-  { name: 'Projects', to: 'projects', offset: -50 },
+  { name: 'Home', href: '#hero' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 export const skills = [
   {
-    name: 'JavaScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    color: '#F7DF1E',
+    category: 'Frontend',
+    items: [
+      {
+        name: 'React',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+        color: '#61DAFB',
+      },
+      {
+        name: 'Next.js',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+        color: '#e8f4ff',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        color: '#3178C6',
+      },
+      {
+        name: 'Tailwind CSS',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+        color: '#06B6D4',
+      },
+      {
+        name: 'React Router',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg',
+        color: '#CA4245',
+      },
+      {
+        name: 'Redux',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+        color: '#764ABC',
+      },
+    ],
   },
   {
-    name: 'TypeScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    color: '#3178C6',
+    category: 'Backend',
+    items: [
+      {
+        name: 'Node.js',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+        color: '#5FA04E',
+      },
+      {
+        name: 'Python',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+        color: '#F7CA3E',
+      },
+      {
+        name: 'Express',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+        color: '#ffffff',
+      },
+      {
+        name: 'WebSockets',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
+        color: '#00b4ff',
+      },
+    ],
   },
   {
-    name: 'React',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    color: '#61DAFB',
+    category: 'Mobile',
+    items: [
+      {
+        name: 'React Native',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactnative/reactnative-original-wordmark.svg',
+        color: '#61DAFB',
+      },
+      {
+        name: 'Expo',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-line.svg',
+        color: '#ffffff',
+      },
+    ],
   },
   {
-    name: 'Next.js',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-    color: '#FFFFFF',
+    category: 'Database',
+    items: [
+      {
+        name: 'PostgreSQL',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+        color: '#4169E1',
+      },
+      {
+        name: 'MongoDB',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+        color: '#47A248',
+      },
+      {
+        name: 'Prisma',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
+        color: '#e8f4ff',
+      },
+      {
+        name: 'Supabase',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
+        color: '#3ECF8E',
+      },
+    ],
   },
   {
-    name: 'Node.js',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-    color: '#8CC84B',
-  },
-  {
-    name: 'Express.js',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-    color: '#FFFFFF',
-  },
-  {
-    name: 'MongoDB',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-    color: '#4DB33D',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
-    color: '#38BDF8',
-  },
-  {
-    name: 'Git',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-    color: '#F05033',
-  },
-  {
-    name: 'Python',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    color: '#3776AB',
-  },
-  {
-    name: 'Java',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-    color: '#007396',
-  },
-  {
-    name: 'PostgreSQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-    color: '#336791',
-  },
-  {
-    name: 'AWS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-    color: '#FF9900',
+    category: 'DevOps',
+    items: [
+      {
+        name: 'Git',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+        color: '#F05032 ',
+      },
+      {
+        name: 'Github',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+        color: '#e8f4ff',
+      },
+      {
+        name: 'AWS',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
+        color: '#FF9900',
+      },
+    ],
   },
 ]
 
@@ -87,7 +142,13 @@ export const experienceData = [
     date: 'Sept 2025 - Nov 2025',
     description:
       'Led a small development team to build a full-stack web application. Contributed to both frontend and backend development, implemented core features, and collaborated closely with the team to deliver a functional and scalable product.',
-    logo: techTalks,
+    highlights: [
+      'Led the end-to-end delivery of CodeLeb from concept to launch.',
+      'Guided the team through Agile sprints to keep work aligned and on schedule.',
+      'Created an engaging learning experience with clear flows and feedback.',
+      'Built a reliable backend workflow connected to the product data.',
+    ],
+    location: 'Remote',
   },
 ]
 

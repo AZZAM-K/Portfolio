@@ -1,88 +1,183 @@
-import TypingAnimation from '@/components/TypingAnimation'
-import { MapPin, File } from 'lucide-react'
-import { LinkedinIcon, GithubIcon } from '@/components/Icons'
+'use client'
+
+import TypedTagline from '@/components/TypedTagline'
 import Image from 'next/image'
 import Link from 'next/link'
-import ContactButton from '@/components/ContactButton'
+import { motion, type Variants } from 'framer-motion'
+
+const heroItem: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94], delay },
+  }),
+}
 
 const Hero = () => {
   return (
-    <section className='home min-h-screen w-full bg-black text-white flex items-center justify-center pt-24 pb-10'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-col-reverse lg:flex-row gap-15 items-center'>
-          <div className='flex-1 text-center md:text-left'>
-            <h1 className='text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight'>
-              <span className='block text-gray-300 font-light'>Hi, I am</span>
-              <span className='block text-red-600 mt-2'>Azzam Al Kahil</span>
-            </h1>
-            <div className='mt-4 min-h-10'>
-              <TypingAnimation />
-            </div>
-            <p className='mt-6 text-lg text-gray-400 max-w-lg mx-auto md:mx-0'>
-              I’m a passionate Fullstack Developer specializing in Next.js and
-              React. I build modern, scalable web applications with clean and
-              efficient code. Let’s turn ideas into reality.
-            </p>
-            <div className='mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
-              <Link
-                href='/CV.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-4 px-8 py-3 bg-gray-800 text-white font-medium rounded-lg shadow-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105'
+    <section id='hero' className='relative overflow-hidden pb-20 pt-28'>
+      <div className='absolute inset-0'>
+        <div
+          className='absolute inset-0 opacity-70'
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(0, 180, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 180, 255, 0.05) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+            maskImage:
+              'radial-gradient(ellipse 80% 80% at 50% 50%, black 35%, transparent 100%)',
+          }}
+        />
+        <div
+          className='absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full
+         bg-[radial-gradient(circle,rgba(0,180,255,0.08)_0%,transparent_70%)]'
+        />
+        <div className='absolute left-4 top-16 h-9 w-9 border-l-2 border-t-2 border-[rgba(0,245,255,0.38)] sm:left-8 sm:top-20 lg:left-12' />
+        <div className='absolute right-4 top-16 h-9 w-9 border-r-2 border-t-2 border-[rgba(0,245,255,0.38)] sm:right-8 sm:top-20 lg:right-12' />
+        <div className='absolute bottom-10 left-4 h-9 w-9 border-b-2 border-l-2 border-[rgba(0,245,255,0.22)] sm:bottom-14 sm:left-8 lg:left-12' />
+        <div className='absolute bottom-10 right-4 h-9 w-9 border-b-2 border-r-2 border-[rgba(0,245,255,0.22)] sm:bottom-14 sm:right-8 lg:right-12' />
+      </div>
+
+      <div className='relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
+        <div className='grid gap-12 lg:grid-cols-2 lg:items-center'>
+          <div className='flex flex-col items-start'>
+            <motion.div
+              className='mb-8 inline-flex items-center gap-2 rounded-sm border border-[rgba(0,245,255,0.22)]
+               bg-[rgba(0,245,255,0.04)] px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-(--brand-cyan)'
+              custom={0}
+              variants={heroItem}
+              initial='hidden'
+              animate='show'
+            >
+              <span className='h-2 w-2 rounded-full bg-(--brand-cyan) shadow-[0_0_8px_rgba(0,245,255,0.8)]' />
+              Available for work
+            </motion.div>
+            <motion.h1
+              className='mb-6 font-display text-3xl uppercase tracking-[0.45em] text-(--brand-cyan)
+               drop-shadow-[0_0_18px_rgba(0,245,255,0.58)] sm:text-4xl'
+              custom={0.15}
+              variants={heroItem}
+              initial='hidden'
+              animate='show'
+            >
+              AZZAM<span className='text-white'>_K</span>
+            </motion.h1>
+            <motion.p
+              className='font-display text-sm uppercase tracking-[0.35em] text-[rgba(0,180,255,0.82)] h-8'
+              custom={0.3}
+              variants={heroItem}
+              initial='hidden'
+              animate='show'
+            >
+              <TypedTagline />
+            </motion.p>
+            <motion.p
+              className='mt-6 max-w-xl text-sm leading-7 text-[rgba(180,210,240,0.62)]'
+              custom={0.45}
+              variants={heroItem}
+              initial='hidden'
+              animate='show'
+            >
+              Crafting high-performance systems and immersive interfaces.
+              Turning complex problems into elegant, scalable solutions.
+            </motion.p>
+            <motion.div
+              className='mt-10 flex flex-wrap gap-3'
+              custom={0.6}
+              variants={heroItem}
+              initial='hidden'
+              animate='show'
+            >
+              <motion.a
+                href='#projects'
+                className='inline-flex items-center justify-center rounded-sm border border-[rgba(0,245,255,0.45)]
+                 bg-[rgba(0,245,255,0.08)] px-6 py-3 text-xs uppercase tracking-[0.3em] text-(--brand-cyan) transition-colors
+                  duration-200 hover:border-[rgba(0,245,255,0.75)]'
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
               >
-                View my CV
-                <File className='w-7 h-7' />
-              </Link>
-              <ContactButton />
-            </div>
-            <div className='mt-10 flex flex-col items-center md:items-start space-y-4'>
-              <div className='flex space-x-6'>
+                View Projects
+              </motion.a>
+              <motion.div
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+              >
                 <Link
-                  href='http://linkedin.com/in/azzam-al-kahil'
+                  href='/CV.pdf'
                   target='_blank'
                   rel='noopener noreferrer'
-                  title='Linkedin'
-                  className='text-gray-400 hover:text-red-500 transition-all transform hover:scale-125 duration-300'
+                  className='inline-flex items-center justify-center rounded-sm border border-[rgba(180,210,240,0.22)]
+                   px-6 py-3 text-xs uppercase tracking-[0.3em] text-[rgba(180,210,240,0.65)] transition-colors duration-200
+                    hover:border-[rgba(0,245,255,0.28)] hover:text-(--text-main)'
                 >
-                  <LinkedinIcon className='w-7 h-7' />
+                  View CV
                 </Link>
-                <Link
-                  href='https://github.com/AZZAM-K'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  title='GitHub'
-                  className='text-gray-400 hover:text-red-500 transition-all transform hover:scale-125 duration-300'
-                >
-                  <GithubIcon className='w-7 h-7' />
-                </Link>
-              </div>
-              <div className='flex items-center space-x-2 text-gray-400 hover:text-red-500 transition-colors duration-300'>
-                <MapPin className='w-5 h-5' />
-                <span>Lebanon - Tripoli</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
-          <div className='flex-1 flex justify-center items-center'>
-            <div className='relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 group'>
-              <div
-                className='absolute -inset-2 bg-linear-to-br from-red-600 via-red-500 to-red-700 rounded-full blur-2xl
-               opacity-70 group-hover:opacity-100 transition-opacity duration-300'
-              ></div>
-              <div
-                className='absolute -inset-1 bg-linear-to-br from-red-500 to-red-700 rounded-full blur-lg opacity-50
-               group-hover:opacity-75 transition-opacity duration-300'
-              ></div>
+
+          <motion.div
+            className='relative flex items-center justify-center'
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.75,
+              delay: 0.3,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <div
+              className='absolute h-[260px] w-[260px] rounded-full border border-[rgba(0,245,255,0.22)]
+             border-t-[rgba(0,245,255,0.7)] animate-[spin_8s_linear_infinite] sm:h-80 sm:w-[320px] lg:h-[360px] lg:w-[360px]'
+            />
+            <div
+              className='absolute h-[22px] w-[22px] border-l-2 border-t-2
+             border-[rgba(0,245,255,0.7)] -translate-x-28 -translate-y-28 sm:-translate-x-36 sm:-translate-y-36 lg:-translate-x-40 lg:-translate-y-40'
+            />
+            <div
+              className='absolute h-[22px] w-[22px] border-r-2 border-t-2
+             border-[rgba(0,245,255,0.7)] translate-x-28 -translate-y-28 sm:translate-x-36 sm:-translate-y-36 lg:translate-x-40 lg:-translate-y-40'
+            />
+            <div
+              className='absolute h-[22px] w-[22px] border-l-2 border-b-2
+             border-[rgba(0,245,255,0.7)] -translate-x-28 translate-y-28 sm:-translate-x-36 sm:translate-y-36 lg:-translate-x-40 lg:translate-y-40'
+            />
+            <div
+              className='absolute h-[22px] w-[22px] border-r-2 border-b-2
+             border-[rgba(0,245,255,0.7)] translate-x-28 translate-y-28 sm:translate-x-36 sm:translate-y-36 lg:translate-x-40 lg:translate-y-40'
+            />
+
+            <div className='relative h-60 w-60 overflow-hidden rounded-full border-2 border-[rgba(0,245,255,0.4)] shadow-[0_0_40px_rgba(0,180,255,0.3)] sm:h-[280px] sm:w-[280px] lg:h-[300px] lg:w-[300px]'>
               <Image
                 src='/hero.jpg'
-                alt='azzam-k'
-                width={384}
-                height={384}
-                unoptimized
+                alt='Developer'
+                width={300}
+                height={300}
+                className='h-full w-full object-cover object-top'
                 loading='eager'
-                className='relative z-10 w-full h-full rounded-full object-fill border-4 border-red-500/50 shadow-2xl shadow-red-600/50'
               />
+              <div className='absolute inset-0 bg-[linear-gradient(135deg,rgba(0,30,60,0.5)_0%,rgba(0,180,255,0.12)_50%,rgba(0,10,20,0.45)_100%)] mix-blend-multiply' />
             </div>
-          </div>
+
+            <motion.div
+              className='absolute left-0 top-10 hidden sm:flex items-center gap-2 rounded-sm border border-[rgba(0,245,255,0.28)] bg-[rgba(5,10,15,0.88)] px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-[rgba(0,245,255,0.85)]'
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
+              <span className='h-2 w-2 rounded-full bg-(--brand-cyan) shadow-[0_0_6px_var(--brand-cyan)]' />
+              10+ Projects
+            </motion.div>
+            <motion.div
+              className='absolute right-0 bottom-8 hidden sm:flex items-center gap-2 rounded-sm border border-[rgba(0,245,255,0.28)] bg-[rgba(5,10,15,0.88)] px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-[rgba(0,245,255,0.85)]'
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+            >
+              <span className='h-2 w-2 rounded-full bg-(--brand-cyan) shadow-[0_0_6px_var(--brand-cyan)]' />
+              1+ Yrs Exp
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

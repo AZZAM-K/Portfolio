@@ -1,1 +1,133 @@
 @import 'tailwindcss';
+
+:root {
+  --brand-cyan: #1fe3f2;
+  --brand-cyan-dark: #0bbad2;
+  --brand-cream: #f1f0e3;
+  --bg-ink: #040507;
+  --bg-ink-2: #0b1116;
+  --bg-ink-3: #0f1820;
+  --text-main: #e6fbff;
+  --text-muted: #93aab3;
+  --border-soft: rgba(31, 227, 242, 0.2);
+  --border-strong: rgba(31, 227, 242, 0.6);
+  --shadow-glow: 0 0 28px rgba(31, 227, 242, 0.22);
+  --shadow-deep: 0 24px 40px rgba(2, 8, 12, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-ink);
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--bg-ink);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      circle at 18% 22%,
+      rgba(31, 227, 242, 0.2),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(241, 240, 227, 0.12),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(31, 227, 242, 0.06),
+      transparent 35%,
+      rgba(31, 227, 242, 0.05)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(31, 227, 242, 0.05),
+      rgba(31, 227, 242, 0.05) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(31, 227, 242, 0.04),
+      rgba(31, 227, 242, 0.04) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  scroll-margin-top: 110px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--brand-cream);
+}
+
+.section-kicker {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.65rem;
+  color: var(--brand-cyan);
+}
+
+.panel {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 24, 32, 0.95),
+    rgba(6, 10, 14, 0.95)
+  );
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-glow);
+}
+
+.panel-strong {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-deep), var(--shadow-glow);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--brand-cream);
+  border: 1px solid var(--border-soft);
+  background: rgba(12, 18, 24, 0.9);
+}
+
+::selection {
+  background: rgba(31, 227, 242, 0.35);
+  color: var(--text-main);
+}

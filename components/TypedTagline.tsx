@@ -1,19 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-const TypingAnimation = () => {
+const TypedTagline = () => {
   const [text, setText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
   const [loopNum, setLoopNum] = useState(0)
   const [typingSpeed, setTypingSpeed] = useState(150)
 
   useEffect(() => {
-    const roles = [
-      'Fullstack Developer',
-      'Next.js Developer',
-      'React Developer',
-    ]
+    const roles = ['Full Stack Developer', 'Web Developer', 'Mobile Developer']
 
     const handleTyping = () => {
       const i = loopNum % roles.length
@@ -37,14 +33,14 @@ const TypingAnimation = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed)
     return () => clearTimeout(timer)
-  }, [text, isDeleting, loopNum, typingSpeed]) // Removed roles from dependencies
+  }, [text, isDeleting, loopNum, typingSpeed])
 
   return (
-    <span className='text-3xl sm:text-4xl font-semibold text-gray-300 h-10'>
+    <span className='text-(--brand-cyan)'>
       {text}
-      <span className='text-red-600 animate-pulse'>|</span>
+      <span className='text-(--brand-cyan) animate-pulse'>_</span>
     </span>
   )
 }
 
-export default TypingAnimation
+export default TypedTagline

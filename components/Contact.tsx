@@ -1,74 +1,154 @@
-import { Mail, Phone } from 'lucide-react'
-import Link from 'next/link'
+'use client'
+
+import { GithubIcon, LinkedinIcon } from '@/components/Icons'
+import { Mail, MapPin, Phone } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { container, fadeUp, scaleIn, viewport } from '@/constants/animations'
+
+const CONTACT_ITEMS = [
+  {
+    Icon: Mail,
+    label: 'Email',
+    value: 'azzam.kahil.dev@gmail.com',
+    href: 'mailto:azzam.kahil.dev@gmail.com',
+    color: '#00f5ff',
+  },
+  {
+    Icon: Phone,
+    label: 'Phone',
+    value: '+961 76 338 952',
+    href: 'https://wa.me/96176338952',
+    color: '#00b4ff',
+  },
+  {
+    Icon: MapPin,
+    label: 'Location',
+    value: 'Tripoli, Lebanon',
+    href: undefined,
+    color: '#0080ff',
+  },
+]
+
+const SOCIALS = [
+  {
+    Icon: GithubIcon,
+    label: 'GitHub',
+    href: 'https://github.com/AZZAM-K',
+    color: '#e8f4ff',
+  },
+  {
+    Icon: LinkedinIcon,
+    label: 'LinkedIn',
+    href: 'http://linkedin.com/in/azzam-al-kahil',
+    color: '#0A66C2',
+  },
+]
 
 const Contact = () => {
+  const shouldReduceMotion = useReducedMotion()
+  const revealProps = shouldReduceMotion
+    ? {}
+    : { initial: 'hidden', whileInView: 'visible', viewport }
+
   return (
-    <section className='contact w-full bg-black text-gray-300 py-10'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <h2 className='text-4xl sm:text-5xl font-extrabold tracking-tight text-center mb-16'>
-          <span className='bg-linear-to-r from-red-500 to-red-700 bg-clip-text text-transparent'>
-            Contact Me
-          </span>
-        </h2>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start'>
-          <div className='text-center md:text-left'>
-            <h3 className='text-3xl font-bold text-gray-100 mb-4'>
-              Let&apos;s Connect
-            </h3>
-            <p className='text-lg text-gray-400 mb-6'>
-              I’m currently exploring internship and job opportunities where I
-              can grow as a developer and contribute to impactful, real-world
-              projects. I’m always eager to learn, collaborate, and take on new
-              challenges.
-            </p>
-            <p className='text-lg text-gray-400'>
-              If you have any questions, opportunities, or simply want to
-              connect and exchange ideas, feel free to reach out — I’d be glad
-              to chat and build new connections!
-            </p>
+    <section
+      id='contact'
+      className='relative px-4 pb-[110px] pt-24 sm:px-6 lg:px-12'
+    >
+      <div className='absolute left-0 right-0 top-0 h-px bg-[linear-gradient(to_right,transparent,rgba(31,227,242,0.17),transparent)]' />
+      <div className='mx-auto max-w-[1100px]'>
+        <div className='mx-auto max-w-[680px] text-center'>
+          <div className='mb-[11px] text-[10px] uppercase tracking-[5px] text-(--brand-cyan)'>
+            {'//'} 05 — REACH OUT
           </div>
+          <h2 className='font-display text-[36px] font-extrabold tracking-[0.18em] text-(--brand-cream)'>
+            Contact
+          </h2>
 
-          <div className='p-4 sm:p-8 bg-gray-900 border border-gray-800 rounded-lg hover:border-red-600 hover:shadow-xl hover:shadow-red-900/20 duration-300 transition-all'>
-            <h3 className='text-2xl font-semibold text-white mb-6'>
-              Message Me Here
-            </h3>
-            <div className='space-y-6'>
-              <div className='flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 group'>
-                <div className='p-3 bg-gray-800 rounded-full group-hover:bg-red-600 transition-colors duration-300 shrink-0'>
-                  <Mail className='w-6 h-6 text-red-500 group-hover:text-white transition-colors duration-300' />
-                </div>
-                <Link
-                  href='mailto:azzam.kahil.dev@gmail.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
+          <motion.p
+            className='mt-6 text-[15.5px] leading-[1.85] text-(--text-muted)'
+            variants={shouldReduceMotion ? undefined : fadeUp}
+            {...revealProps}
+          >
+            I&apos;m always open to new opportunities, interesting
+            collaborations, and conversations about challenging problems.
+            Don&apos;t hesitate to reach out.
+          </motion.p>
+
+          <motion.div
+            className='mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'
+            variants={shouldReduceMotion ? undefined : container}
+            {...revealProps}
+          >
+            {CONTACT_ITEMS.map(({ Icon, label, value, href, color }) => (
+              <motion.div
+                key={label}
+                className='flex flex-col items-center gap-2.5 rounded-lg border border-[rgba(0,180,255,0.14)] bg-[rgba(8,15,23,0.78)] px-5 py-7 text-center backdrop-blur-[20px]'
+                variants={shouldReduceMotion ? undefined : scaleIn}
+                whileHover={
+                  shouldReduceMotion
+                    ? undefined
+                    : {
+                        y: -4,
+                        borderColor: color,
+                        boxShadow: `0 0 24px ${color}33`,
+                      }
+                }
+                transition={{ duration: 0.22 }}
+              >
+                <span
+                  className='flex h-12 w-12 items-center justify-center rounded-full border border-(--border-strong) bg-black/60'
+                  style={{ color }}
                 >
-                  <p className='text-sm text-gray-400'>Email</p>
-                  <p className='text-lg text-gray-200 group-hover:text-red-500 transition-colors duration-300 break-all'>
-                    azzam.kahil.dev@gmail.com
-                  </p>
-                </Link>
-              </div>
-              <div className='flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 group'>
-                <div className='p-3 bg-gray-800 rounded-full group-hover:bg-red-600 transition-colors duration-300 shrink-0'>
-                  <Phone className='w-6 h-6 text-red-500 group-hover:text-white transition-colors duration-300' />
-                </div>
-                <Link
-                  href='https://wa.me/96176338952'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <p className='text-sm text-gray-400'>Phone</p>
-                  <p className='text-lg text-gray-200 group-hover:text-red-500 transition-colors duration-300'>
-                    +961 76 338 952
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </div>
+                  <Icon className='h-6 w-6' />
+                </span>
+                <span className='text-[10px] uppercase tracking-[0.24em] text-(--text-muted)'>
+                  {label}
+                </span>
+                {href ? (
+                  <a
+                    href={href}
+                    className='text-sm font-semibold text-(--brand-cream)'
+                    style={{ color }}
+                  >
+                    {value}
+                  </a>
+                ) : (
+                  <span className='text-sm font-semibold text-(--brand-cream)'>
+                    {value}
+                  </span>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className='mt-10 flex flex-wrap items-center justify-center gap-6'
+            variants={shouldReduceMotion ? undefined : container}
+            {...revealProps}
+          >
+            {SOCIALS.map(({ Icon, label, href, color }) => (
+              <motion.a
+                key={label}
+                href={href}
+                className='flex items-center gap-2 text-[11px] uppercase tracking-[2.5px] text-[rgba(180,210,240,0.45)]'
+                variants={shouldReduceMotion ? undefined : scaleIn}
+                whileHover={
+                  shouldReduceMotion ? undefined : { scale: 1.15, color }
+                }
+                title={label}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Icon className='h-5 w-5' />
+                <span>{label}</span>
+              </motion.a>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
   )
 }
+
 export default Contact

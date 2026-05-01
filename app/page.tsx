@@ -7,13 +7,13 @@ import Skills from '@/components/Skills'
 
 export default function Home() {
   return (
-    <div className='bg-black'>
+    <main className='app-shell'>
       <Hero />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
       <Projects />
       <Contact />
-    </div>
+    </main>
   )
 }
