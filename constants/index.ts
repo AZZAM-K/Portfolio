@@ -2,6 +2,12 @@ import teamsDev from '@/public/teams-dev.png'
 import appleStore from '@/public/apple-store.png'
 import CodeLeb from '@/public/codeLeb.png'
 import LebSpace from '@/public/LebSpace.png'
+import {
+  expoIcon,
+  ExpressIcon,
+  GithubIcon,
+  SocketIcon,
+} from '@/components/Icons'
 
 export const navItems = [
   { name: 'Home', href: '#hero' },
@@ -63,12 +69,12 @@ export const skills = [
       },
       {
         name: 'Express',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+        icon: ExpressIcon,
         color: '#ffffff',
       },
       {
         name: 'WebSockets',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
+        icon: SocketIcon,
         color: '#00b4ff',
       },
     ],
@@ -83,7 +89,7 @@ export const skills = [
       },
       {
         name: 'Expo',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-line.svg',
+        icon: expoIcon,
         color: '#ffffff',
       },
     ],
@@ -123,7 +129,7 @@ export const skills = [
       },
       {
         name: 'Github',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+        icon: GithubIcon,
         color: '#e8f4ff',
       },
       {

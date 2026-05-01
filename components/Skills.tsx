@@ -89,13 +89,17 @@ const Skills = () => {
                       }
                       transition={{ duration: 0.4 }}
                     >
-                      <Image
-                        src={item.icon}
-                        alt={item.name}
-                        width={30}
-                        height={30}
-                        className='object-contain'
-                      />
+                      {typeof item.icon === 'string' ? (
+                        <Image
+                          src={item.icon}
+                          alt={item.name}
+                          width={30}
+                          height={30}
+                          className='object-contain'
+                        />
+                      ) : (
+                        <item.icon />
+                      )}
                     </motion.span>
                     <span className='text-[11px] uppercase tracking-[0.2em] text-(--text-main) opacity-80'>
                       {item.name}
