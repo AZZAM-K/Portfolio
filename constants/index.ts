@@ -125,7 +125,7 @@ export const skills = [
       {
         name: 'Git',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-        color: '#F05032 ',
+        color: '#F05032',
       },
       {
         name: 'Github',
