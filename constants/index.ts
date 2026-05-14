@@ -137,6 +137,11 @@ export const skills = [
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
         color: '#FF9900',
       },
+      {
+        name: 'Docker',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg',
+        color: '#2496ED',
+      },
     ],
   },
 ]

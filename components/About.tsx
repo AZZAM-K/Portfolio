@@ -12,7 +12,7 @@ const PROFILE_ROWS = [
   { key: 'name', value: '"Azzam Al Kahil"' },
   { key: 'role', value: '"Full Stack Developer"' },
   { key: 'location', value: '"Tripoli, Lebanon"' },
-  { key: 'focus', value: '["Web Apps", "Mobile Apps", "APIs"]' },
+  { key: 'focus', value: '["Web Apps", "Mobile Apps", "Databases"]' },
   { key: 'status', value: '"Open to opportunities"' },
 ]
 

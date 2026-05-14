@@ -93,8 +93,8 @@ const Skills = () => {
                         <Image
                           src={item.icon}
                           alt={item.name}
-                          width={30}
-                          height={30}
+                          width={35}
+                          height={35}
                           className='object-contain'
                         />
                       ) : (
